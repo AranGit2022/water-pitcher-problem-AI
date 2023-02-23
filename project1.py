@@ -142,7 +142,7 @@ def a_star(jug_sizes, target):
                         print("step = ", step)
                     break
 
-        ln = get_index(fn, min(fn))
+        ln = get_index(fn, min(fn, default=0))
         for i in range(0, len(ln)):
             k += 1
             tree.add_node(k, acceptable_state[ln[i]])
@@ -153,7 +153,7 @@ def a_star(jug_sizes, target):
 
 
 if __name__ == '__main__':
-    file = open('C:/Users/Admin/Desktop/project1/test2.txt', 'r')
+    file = open('C:/Users/Admin/Desktop/project1/test6.txt', 'r')
     s = file.readline().split(',')
     j_size = list(int(i) for i in s)
     t = int(file.readline())
