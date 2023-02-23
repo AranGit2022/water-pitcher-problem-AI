@@ -63,6 +63,16 @@ def a_star(jug_sizes, target):
                 Solve = True
                 #print(past_state)
                 #print(current_state)
+                m = len(rpt) - 1
+                while m != 0:
+                    # print(rpt[m])
+                    queue.append(rpt[m])
+                    m = rpt.index(rpt_father[m])
+                queue.append([0] * n)
+                for q in range(len(queue) - 1, -1, -1):
+                    print(queue[q])
+                    step += 1
+                    print("step = ", step)
                 break
 
         for i in range(0, n - 1):
@@ -83,6 +93,16 @@ def a_star(jug_sizes, target):
                 Solve = True
                 #print(past_state)
                 #print(current_state)
+                m = len(rpt) - 1
+                while m != 0:
+                    # print(rpt[m])
+                    queue.append(rpt[m])
+                    m = rpt.index(rpt_father[m])
+                queue.append([0] * n)
+                for q in range(len(queue) - 1, -1, -1):
+                    print(queue[q])
+                    step += 1
+                    print("step = ", step)
                 break
 
         for i in range(0, n):
@@ -133,7 +153,7 @@ def a_star(jug_sizes, target):
 
 
 if __name__ == '__main__':
-    file = open('C:/Users/Admin/Desktop/project1/test1.txt', 'r')
+    file = open('C:/Users/Admin/Desktop/project1/test2.txt', 'r')
     s = file.readline().split(',')
     j_size = list(int(i) for i in s)
     t = int(file.readline())
